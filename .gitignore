@@ -1,0 +1,5 @@
+/.idea/
+/app/*
+/database/*
+.env
+/app/
