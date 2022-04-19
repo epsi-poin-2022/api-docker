@@ -69,7 +69,7 @@ reset-test-database: ## Reset test database
 	@$(SYMFONY) doctrine:database:create --env=test
 	@$(SYMFONY) doctrine:schema:update --force --env=test
 
-fixtures-test: ## Load fixtures in test database
+test-fixtures: ## Load fixtures in test database
 	@$(SYMFONY) doctrine:fixtures:load -n --env=test
 
 test: ## Launch tests
