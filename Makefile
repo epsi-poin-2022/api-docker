@@ -3,11 +3,13 @@ DOCKER_COMP = docker-compose
 
 # Docker containers
 PHP_CONT = $(DOCKER_COMP) exec php
+NODE_CONT = $(DOCKER_COMP) exec node
 
 # Executables
 PHP      = $(PHP_CONT) php
 COMPOSER = $(PHP_CONT) composer
 SYMFONY  = $(PHP) bin/console
+NPM     = $(NODE_CONT) npm
 
 # Misc
 .DEFAULT_GOAL = help
@@ -47,6 +49,19 @@ composer: ## Run composer, pass the parameter "c=" to run a given command, examp
 vendor: ## Install vendors according to the current composer.lock file
 vendor: c=install
 vendor: composer
+
+## —— Node/npm ——————————————————————————————————————————————————————————————
+npm: ## Run npm, pass the parameter "c=" to run a given command, example: make npm c='rum watch'
+	@$(eval c ?=)
+	@$(NPM) $(c)
+
+node_modules: ## Install node modules
+node_modules: c=install
+node_modules: npm
+
+watch: ## npm run watch
+watch: c=run watch
+watch: npm
 
 ## —— Symfony 🎵 ———————————————————————————————————————————————————————————————
 sf: ## List all Symfony commands or pass the parameter "c=" to run a given command, example: make sf c=about
