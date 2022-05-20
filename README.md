@@ -23,3 +23,6 @@
 
 ## accèder à l’api
 - http://localhost/api (avec le port par défaut)
+
+## accèder à l’admin
+- http://localhost/app/login (avec le port par défaut)
