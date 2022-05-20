@@ -1,10 +1,10 @@
 # Environnement de développement LEMP sous DOCKER
 
-## préalable au déploiement en local
+## Préalable au déploiement en local
 - Pour Windows installer la commande make (https://winstall.app/apps/GnuWin32.Make ou http://gnuwin32.sourceforge.net/packages/make.htm?ref=winstall)
 - Pensez à ajouter cette application dans le path des variables d’environment ("C:\Program Files (x86)\GnuWin32\bin")
 
-## déploiement en local
+## Déploiement en local
 - mkdir digital-jobs-api
 - cd digital-jobs-api
 - git clone --branch dev git@github.com:epsi-poin-2022/api-docker.git .
@@ -21,8 +21,8 @@
 - make reset-database
 - make fixtures
 
-## accèder à l’api
+## Accéder à l’api
 - http://localhost/api (avec le port par défaut)
 
-## accèder à l’admin
+## Accéder à l’admin
 - http://localhost/app/login (avec le port par défaut)
