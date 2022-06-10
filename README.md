@@ -18,8 +18,10 @@
 - make build
 - make up
 - make vendor
+- make node_modules
 - make reset-database
 - make fixtures
+- make watch
 
 ## Accéder à l’api
 - http://localhost/api (avec le port par défaut)
