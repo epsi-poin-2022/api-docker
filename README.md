@@ -8,11 +8,11 @@
 - mkdir digital-jobs-api
 - cd digital-jobs-api
 - git clone --branch dev git@github.com:epsi-poin-2022/api-docker.git .
-- copier le fichier .env.bak sur .env
+- copier le fichier .env.bak sur .env (et renseigner les variables)
 - mkdir app
 - cd app/
 - git clone git@github.com:epsi-poin-2022/api-app.git .
-- copier le fichier .env sur .env.local
+- copier le fichier .env sur .env.local (et renseigner les variables)
 - cd ..
 - mkdir database
 - make build
