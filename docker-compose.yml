@@ -6,7 +6,7 @@ services:
         ports:
             - '127.0.0.1:${NGINX_PORT}:80'
         volumes:
-            - ./app:/app
+            - ./api:/var/www/api
             - ./docker/nginx/site.conf:/etc/nginx/conf.d/default.conf
         links:
             - php
@@ -22,18 +22,18 @@ services:
         container_name: php
         volumes:
             - ./docker/php/php.ini:/usr/local/etc/php/conf.d/custom.ini
-            - ./app:/app
+            - ./api:/var/www/api
         links:
             - mariadb
         depends_on:
             - mariadb
-        working_dir: /app
+        working_dir: ./api:/var/www/api
     node:
         image: node:16.14.0
         volumes:
-            - ./app:/app
+            - ./api:/var/www/api
         container_name: node
-        working_dir: /app
+        working_dir: ./api:/var/www/api
         tty: true
     mariadb:
         image: mariadb:10.8.2
