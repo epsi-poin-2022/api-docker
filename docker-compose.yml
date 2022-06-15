@@ -27,13 +27,13 @@ services:
             - mariadb
         depends_on:
             - mariadb
-        working_dir: ./api:/var/www/api
+        working_dir: /var/www/api
     node:
         image: node:16.14.0
         volumes:
             - ./api:/var/www/api
         container_name: node
-        working_dir: ./api:/var/www/api
+        working_dir: /var/www/api
         tty: true
     mariadb:
         image: mariadb:10.8.2
