@@ -11,7 +11,7 @@
 - copier le fichier .env.bak sur .env (et renseigner les variables)
 - mkdir app
 - cd app/
-- git clone git@github.com:epsi-poin-2022/api-app.git .
+- git clone git@github.com:epsi-poin-2022/api.git .
 - copier le fichier .env sur .env.local (et renseigner les variables)
 - cd ..
 - mkdir database
